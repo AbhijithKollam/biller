@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position:sticky;
+    top: 0px;
+  }
+  .logo{
+    margin-left: 80px;
+  }
+  
+  .logo img {
+    height: 50px; /* Adjust based on your logo size */
+  }
+  
+  .logout button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .logout button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  

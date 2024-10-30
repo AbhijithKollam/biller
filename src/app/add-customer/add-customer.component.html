@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-center ">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#customerModal">
+        <i class="fa-solid fa-plus"></i> &nbsp;Add Customer
+    </button>
+</div>
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customerModalLabel">Add Customer</h5>
+                <button type="button" class="btn-close" (click)="closeModal()"  aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add your form fields here -->
+                <form>
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label" >Customer Name</label>
+                        <input type="text" class="form-control" id="customerName" [(ngModel)]="customerName" name="customerName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerPhone" class="form-label">Customer Phone Number</label>
+                        <input type="number" class="form-control" id="customerPhone" [(ngModel)]="customerPhone" name="customerPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerAddress" class="form-label">Customer Address</label>
+                        <input type="text" class="form-control" id="customerAddress" [(ngModel)]="customerAddress" name="customerAddress" required>
+                    </div>
+                    <!-- Add more fields as needed -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="saveCustomer()">Save Customer</button>
+            </div>
+        </div>
+    </div>
+</div>

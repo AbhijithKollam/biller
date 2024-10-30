@@ -1,0 +1,42 @@
+.sidebar {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh; 
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.sidebar.active {
+    display: block;
+    /* Show when active */
+}
+
+.toggle-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.items {
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    padding: 10px; /* Add padding for a better hover effect */
+    display: block;
+    width: 100%;
+}
+
+.items:hover {
+    background-color: white;
+    color: black !important;
+    padding-left: 15px; /* Slightly increase padding on hover */
+}
+.close-button {
+    font-size: 15px;
+    color: white; /* Adjust color as needed */
+    cursor: pointer;
+    margin-left: 10px; /* Space between title and X */
+}

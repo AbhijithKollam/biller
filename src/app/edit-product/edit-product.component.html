@@ -1,0 +1,35 @@
+<div>
+    <button class="btn btn-outline-danger me-1" (click)="click(product)"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></button>
+</div>
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" >
+                <!-- Add your form fields here -->
+                <form >
+                    <div class="mb-3 text-start">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control" id="itemName" [(ngModel)]="name" name="itemName" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="itemRate" class="form-label">Rate</label>
+                        <input type="number" class="form-control" id="itemRate" [(ngModel)]="rate" name="itemRate" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="itemTax" class="form-label">Tax</label>
+                        <input type="number" class="form-control" id="itemTax" [(ngModel)]="tax" name="itemTax" required>
+                    </div>
+                    <!-- Add more fields as needed -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="editProduct()">Edit Item</button>
+            </div>
+        </div>
+    </div>
+</div>

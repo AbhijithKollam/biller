@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="p-5">
+    <app-add-products (productAdded)="addproduct($event)"></app-add-products>
+</div>
+<div class="p-5 ">
+    <table class="table shadow border text-center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Item</th>
+                <th>Rate(&#8377;)</th>
+                <th>Tax(%)</th>
+                <th>Amount(&#8377;)</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allProducts">
+                <td>{{item.productId}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.rate}}</td>
+                <td>{{item.tax}}</td>
+                <td>{{item.amount}}</td>
+                <td class="d-flex align-items-center justify-content-center">
+                    <app-edit-product [product]="item" (productEdited)="editproduct($event)"></app-edit-product>
+                    <app-delete-product [product]="item" (productDeleted)="deleteproduct($event)"></app-delete-product>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

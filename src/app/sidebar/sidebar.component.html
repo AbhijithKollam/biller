@@ -1,0 +1,26 @@
+<div class="toggle-icon" (click)="toggleSidebar()">
+    <i class="fas fa-bars "></i> <!-- Font Awesome icon -->
+</div>
+
+<div class="sidebar"  [ngClass]="{'active': isActive}">
+    <div class="d-flex justify-content-end  ">
+        <i (click)="toggleSidebar()" class="fa-solid fa-x close-button "></i>
+    </div>
+    <h2  >
+        <img src="https://png.pngtree.com/png-vector/20220620/ourmid/pngtree-document-billing-icon-vector-design-template-png-image_5235517.png" class="mb-3 w-25" alt="">Biller
+    </h2>
+    <ul class="list-unstyled">
+        <li class="my-3" (click)="toggleSidebar()">
+            <a  class="text-white text-decoration-none items" routerLink="/home">Dashboard</a>
+        </li>
+        <li class="my-3"(click)="toggleSidebar()">
+            <a  class="text-white text-decoration-none items" routerLink="/customers">Customers</a>
+        </li>
+        <li class="my-3"(click)="toggleSidebar()">
+            <a  class="text-white text-decoration-none items" routerLink="/products">Products</a>
+        </li>
+        <li class="my-3"(click)="toggleSidebar()">
+            <a  class="text-white text-decoration-none items" routerLink="/invoice">Invoice</a>
+        </li>
+    </ul>
+</div>

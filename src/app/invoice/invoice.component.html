@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="w-100 p-5 d-flex justify-content-between">
+  <div>
+    <input type="text" placeholder="Enter Name">
+    <button type="button" class="btn"><i class="fas fa-search"></i></button>
+  </div>
+  <app-add-customer></app-add-customer>
+</div>
+<div class="p-5">
+  Name, <br>
+  Phone number, <br>
+  Address <br>
+</div>
+<div class=" align-items-center justify-content-center p-5 border shadow ">
+
+  <table class="table w-100">
+    <thead class="w-100">
+      <tr>
+        <th>Id</th>
+        <th>Item</th>
+        <th>Rate</th>
+        <th>Tax(%)</th>
+        <th>Quantity</th>
+        <th>Amount</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>One</td>
+        <td>40</td>
+        <td>5%</td>
+        <td>42</td>
+        <td>2</td>
+        <td>84</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-start ">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#customerModal">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<!-- Button trigger modal -->
+<div>
+    <button class="btn btn-outline-danger ms-1" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do you want to delete this product?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" id="confirmDelete" (click)="delete()">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

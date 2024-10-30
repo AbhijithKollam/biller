@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="p-5">
+    <app-add-customer></app-add-customer>
+</div>
+<div class="p-5 ">
+    <table class="table shadow border text-center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allCustomers">
+                <td>{{item.customerId}}</td>
+                <td>{{item.customerName}}</td>
+                <td>{{item.customerPhone}}</td>
+                <td>{{item.customerAddress}}</td>
+                <td>
+                    <app-actions-customer [customer]="item"></app-actions-customer>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
